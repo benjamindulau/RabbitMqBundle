@@ -60,7 +60,6 @@ class ConsumerPass implements CompilerPassInterface
                 $consumerDefinition
                     ->addMethodCall('setExchange', array(new Reference($exchangeId)))
                     ->addMethodCall('setQueue', array(new Reference($queueId)))
-                    ->addMethodCall('setDispatcher', array(new Reference('event_dispatcher')))
                     ->addMethodCall('setCallback', array(array(new Reference($id), 'execute')))
                 ;
 
